@@ -12,7 +12,7 @@
         .hyphen{
             font-size:px;
             font-weight:bold;
-            
+             
         }
     </style>
 </head>
@@ -41,6 +41,28 @@
             </div>
         </div>
         <!-- 이름 -->
+        <div class="row mt-4">
+            <div class="col-md-1">
+                <label for="name" class="form-label"><span class="text-danger">*</span> 이름</label>
+            </div>
+            <div class="col-md-3">
+                <input type="text" class="form-control" id="name">
+                    
+            </div>
+            <div class="col-md-3 d-flex" >
+                <div class="row form-check mx-2">
+                    <input class="form-check-input" type="radio" id="w" name="radiobtn" autocomplete="off">
+					<label class="form-check-label text-bg-info" for="w" >여자</label>		
+                </div>
+				<div class="row form-check mx-5">
+                    <input class="form-check-input" type="radio" id="m" name="radiobtn" autocomplete="off" >
+					<label class="form-check-label text-bg-warning" for="m">남자</label>	
+                </div>				
+								
+		    </div>
+        </div>
+        <!--생년월일-->
+        
         <div class="row mt-4 ">
             <div class="col-1">
 
@@ -97,7 +119,8 @@
                 <option value="yahoo.co.kr">yahoo.co.kr</option>
                 <option value="korea.com">korea.com</option>
                 <option value="hanmir.com">hanmir.com</option>
-            </select></div>
+            </select>
+        </div>
            
         
         
