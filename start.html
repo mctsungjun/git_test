@@ -1,0 +1,701 @@
+
+<!doctype html>
+<html lang="ko">
+ <head>
+  <title>회원가 </title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+		<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-8GT4234S5G"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-8GT4234S5G');
+	</script>
+	<!-- Event snippet for 문의 conversion page -->
+	<script>
+	gtag('event', 'conversion', {'send_to': 'AW-11222760364/rphKCLmyta4YEKz3tucp'});
+	</script>
+
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR|Titillium+Web" rel="stylesheet">
+
+	<link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/nanumgothic.css">
+	<link type="text/css" rel="stylesheet" href="/css/@default.css" />
+	<link type="text/css" rel="stylesheet" href="/css/bootstrap.css" />
+
+			<script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+			<script type="text/javascript" src="/js/jquery.easing.min.js"></script>
+	<script type="text/javascript" src="/js/placeholders.min.js"></script>
+	<script type="text/javascript" src="/js/slick.min.js"></script>
+	<script type="text/javascript" src="/js/setting.js"></script>
+	<script type="text/javascript" src="/js/common.js"></script>
+	<script type="text/javascript" src="/_data/js/form.js"></script>
+
+
+
+
+	<script type="text/javascript" src="/_data/js/form.js"></script>
+	<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script><script>
+function sample6_execDaumPostcode() {
+	new daum.Postcode({
+		oncomplete: function(data) {
+			// 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+			// 각 주소의 노출 규칙에 따라 주소를 조합한다.
+			// 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+			var fullAddr = ''; // 최종 주소 변수
+			var extraAddr = ''; // 조합형 주소 변수
+
+			// 사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+			if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+				fullAddr = data.roadAddress;
+			} else { // 사용자가 지번 주소를 선택했을 경우(J)
+				fullAddr = data.jibunAddress;
+			}
+
+			// 사용자가 선택한 주소가 도로명 타입일때 조합한다.
+			if(data.userSelectedType === 'R'){
+				//법정동명이 있을 경우 추가한다.
+				if(data.bname !== ''){
+					extraAddr += data.bname;
+				}
+				// 건물명이 있을 경우 추가한다.
+				if(data.buildingName !== ''){
+					extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+				}
+				// 조합형주소의 유무에 따라 양쪽에 괄호를 추가하여 최종 주소를 만든다.
+				fullAddr += (extraAddr !== '' ? ' ('+ extraAddr +')' : '');
+			}
+
+			// 우편번호와 주소 정보를 해당 필드에 넣는다.
+			if(data.zonecode){
+				document.getElementById("zipcode1").value = data.zonecode;
+			}else{
+				document.getElementById("zipcode1").value = data.postcode1+data.postcode2;
+			}
+
+			document.getElementById("address1").value = fullAddr;
+
+			// 커서를 상세주소 필드로 이동한다.
+			document.getElementById("address2").value='';
+			document.getElementById("address2").focus();
+		}
+	}).open();
+}
+
+
+
+    //SNS 연동
+    function SNS_Send(val, subject, content, idx)
+    {
+				var DocSummary = encodeURIComponent(content);
+				var DocImage = "";
+        var snsTitle = encodeURIComponent(subject);
+
+        //var naverURL   = encodeURIComponent('http://barunbooks.com/html/naver_ret.php?bbs_idx='+idx+'&mode=view');
+        var snsURL   = encodeURIComponent('http://barunbooks.com/html/dh_member/join');
+				var faceURL = encodeURIComponent('http://barunbooks.com/html/dh/facebook_ret?url=/html/dh_member/join&subject='+snsTitle+'&content='+DocSummary);
+
+        if (val == 'tw')
+        {
+            window.open("http://twitter.com/home?status=" + snsTitle + " - "+ DocSummary +"("+snsURL+")",val,'');
+        }
+
+        if (val == 'face')
+        {
+						window.open("http://www.facebook.com/sharer/sharer.php?u=" + faceURL,val,'width=700,height=350');
+        }
+
+        if (val == 'naver')
+        {
+						window.open("http://share.naver.com/web/shareView.nhn?url="+naverURL+"&title="+snsTitle,val,'width=410px,height=500px,scrollbars=no');
+        }
+
+    }
+
+</script>
+
+<!-- Enliple Tracker Start -->
+<script defer async src="https://cdn.megadata.co.kr/dist/prod/v2/mtm.js?adverId=barunbooks7&device=W"></script>
+<!-- Enliple Tracker End -->
+
+  </head>
+ <body>
+
+ <!--Wrap-->
+ <div id="wrap">
+
+		
+<!-- Smartlog -->
+<script type="text/javascript">
+    var hpt_info={'_account':'UHPT-24652', '_server': 'a26'};
+</script>
+<script language="javascript" src="//cdn.smlog.co.kr/core/smart.js" charset="utf-8"></script>
+<noscript><img src="//a26.smlog.co.kr/smart_bda.php?_account=24652" style="display:none;width:0;height:0;" border="0"/></noscript>
+
+
+	
+<!-- 각 메인/서브 메뉴 타이틀명 -->
+
+<script type="text/javascript">
+		jQuery(document).ready(function($){
+		var gsnbH = 0;
+
+		for (var i=0; i<$(".gnb > li").length; i++){
+			gsnbH = $(".gnb > li").eq(i).find(".gsnb_wrap").height() > gsnbH ? $(".gnb > li").eq(i).find(".gsnb_wrap").height() : gsnbH;
+		}
+
+		$(".gsnb").height(gsnbH);
+
+		$("#gnb_wrap").on("mouseenter focusin", function(){
+			//$("#h_mask").stop().animate({"paddingBottom":gsnbH + 40}, 300, 'easeOutCubic');
+			$("#header").addClass('hover');
+			$("#h_mask").addClass('on').stop().animate({"paddingBottom":gsnbH + 52}, 300, 'easeOutCubic');
+		}).on("mouseleave focusout", function(){
+			$("#header").removeClass('hover');
+			$("#h_mask").removeClass("on").stop().animate({"paddingBottom":0}, 300, 'easeOutQuint');
+		});
+	});
+
+
+</script>
+
+
+
+<!--Container-->
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
+
+<!-- Member Wrap -->
+<div id="container" style="background-color: #F9F9F9;">
+	<div class="inner s_container pt16 mauto" style="width: 786px;">
+		<form name="join_form" id="join_form" action="?agree=1&ok=1" method="post">
+				<div class="ac pt90">
+			<div class="fz35 ">
+				<strong>회원가입</strong>
+			</div>
+			<div class="fz35 navy pt55">
+				바른북스 출판그룹에 오신것을 환영합니다.
+			</div>
+		</div>
+		<div class="fr fz12 mt26 mb3">
+			*필수입력사항
+		</div>
+		<div class="member-wrap board_box  cl">
+			<!-- Join -->
+			<div class="join-wrap" >
+
+			<!-- Join Form -->
+
+
+				<div class="join-form-wrap mauto" style="width: 622px;margin-top: -4px; ">
+					<ul class="join-form join-form01">
+												<input type="hidden" name="userid_chk">
+						<li>
+							<p class="join-item">
+								<label for="join_id"><span class="red">*</span> 아이디</label>
+							</p>
+							<p class="join-user">
+
+								<input type="text" class="w01" id="join_id" name="userid" onkeyup="javascript:document.join_form.userid_chk.value='';">
+								<span class="mem-btn-join ml17">
+								<a href="javascript:userChk();">중복확인</a>
+								</span>
+								<br>
+								<span class="fz15 dib mt14 gray03 ls-8">※ 3~15자의 영문과 숫자를 포함해 주세요.</span>
+							</p>
+						</li>
+						<li class="mt-4">
+							<p class="join-item">
+								<label for="join_pw"><span class="red">*</span> 비밀번호</label>
+							</p>
+							<p class="join-user">
+								<input type="password" class="w01" id="join_pw" name="passwd"autocomplete="new-password" onblur="text_chkpw();"><br>
+								<span style="color:red; display:none;" id="no_pw">※ 비밀번호 형식이 일치하지 않습니다.</span>
+								<span style="color:blue; display:none;" id="ok_pw">※ 사용가능한 비밀번호 입니다.</span>
+								<span class="fz15 dib mt14 gray03 ls-8">※ 영문/숫자/특수문자 조합 6~20자 이상 입력해주세요. (아이디/전화번호사용 불가)<br>※ 1234** 비밀번호는 홈페이지 사용에 제한됩니다.</span>
+							</p>
+						</li>
+						<li class="mt-4">
+							<p class="join-item">
+								<label for="join_pw2"><span class="red">*</span> 비밀번호 확인</label>
+							</p>
+							<p class="join-user">
+								<input type="password" class="w01" id="join_pw2" name="passwd_check" onblur="multi_chkpw();"><br>
+								<span style="color:red; display:none;" id="no_multipw">※ 비밀번호가 일치하지 않습니다.</span>
+								<span style="color:blue; display:none;" id="ok_multipw">※ 비밀번호가 일치 합니다.</span>
+							</p>
+						</li>
+												<li>
+							<p class="join-item">
+								<label for="join_name" class=""><span class="red">*</span> 이름</label>
+							</p>
+							<p class="join-user">
+								<input type="text" class="w01" id="join_name" placeholder="바른북스" name="name">
+								<span class="s ml17">
+								<label for="w" class="on">
+									<input type="radio" id="w" name="type" value="여">
+									여</label>
+								</span>
+								<span class="s ml7">
+								<label for="m">
+									<input type="radio" id="m" name="type" value="남">
+									남</label>
+								</span>
+							</p>
+						</li>
+						<script>
+								$('.s label').on('click', function(){
+									var name = $(this).find('input').attr('name')
+									if($(this).find('input').is(":checked")) {
+										$('.s input[name='+name+']').parent().removeClass('on')
+										$(this).addClass('on');
+									} else {
+										$(this).removeClass('on')
+									}
+								})
+							</script>
+						<li>
+							<p class="join-item">
+								<label for="join_birth" class=""><span class="red">*</span> 생년월일</label>
+							</p>
+							<p class="join-user">
+								<span class="posr">
+								<input type="text" class="w03" name="birth" id="birth" placeholder="2019-05-20" readonly>
+								<!-- <button type="button" class="plain cal"><img src="/image/sub/cal.png" alt=""></button> -->
+								</span>
+							</p>
+						</li>
+						<li>
+							<p class="join-item">
+								<label for="address2" class=""><span class="red">*</span> 주소</label>
+							</p>
+							<div class="join-user">
+								<input type="text" class="w06" id="zipcode1" name="zip1" readonly>
+								<span class="mem-btn-join ml12">
+								<a href="javascript:sample6_execDaumPostcode();">우편번호찾기</a>
+								</span><br>
+								<p class="mt15">
+									<input type="text" class="w02" name="add1" id="address1" readonly>
+									<input type="text" class="w04 ml12" id="address2" name="add2">
+								</p>
+							</div>
+						</li>
+						<li>
+							<p class="join-item">
+								<label for="join_email" class=""><span class="red">*</span> 이메일</label>
+							</p>
+							<p class="join-user">
+								<input type="text" class="w07 mr5" id="join_email" name="email1">@
+								<input type="text" class="w07 ml2" name="email2" id="email2">
+								<select name="email_sel" class="w08 ml11" onchange="res(this.value)">
+									<option value="">직접입력</option>
+									<option value="naver.com">naver.com</option>
+									<option value="hanmail.net">hanmail.net</option>
+									<option value="nate.com">nate.com</option>
+									<option value="paran.com">paran.com</option>
+									<option value="empal.com">empal.com</option>
+									<option value="hotmail.com">hotmail.com</option>
+									<option value="gmail.com">gmail.com</option>
+									<option value="dreamwiz.com">dreamwiz.com</option>
+									<option value="lycos.co.kr">lycos.co.kr</option>
+									<option value="yahoo.co.kr">yahoo.co.kr</option>
+									<option value="korea.com">korea.com</option>
+									<option value="hanmir.com">hanmir.com</option>
+								</select>
+							</p>
+						</li>
+						<li>
+							<p class="join-item">
+								<label for="join_phone" class=""><span class="red">*</span> 휴대폰번호</label>
+							</p>
+							<p class="join-user">
+								<select name="phone1" id="" class="w10 mr5">
+									<option value="010">010</option>
+									<option value="011">011</option>
+									<option value="016">016</option>
+									<option value="017">017</option>
+									<option value="018">018</option>
+									<option value="019">019</option>
+								</select>
+								-
+								<input type="text" class="w09 mr5 ml5" name="phone2" maxlength="4">
+								-
+								<input type="text" class="w09 ml5" name="phone3" maxlength="4">
+							</p>
+						</li>
+						<li>
+							<p class="join-item">
+								<label for="join_tel">전화번호</label>
+							</p>
+							<p class="join-user">
+								<select name="tel1" id="" class="w10 mr5">
+									<option value="070">070</option>
+									<option value="02">02</option>
+									<option value="031">031</option>
+									<option value="032">032</option>
+									<option value="033">033</option>
+									<option value="041">041</option>
+									<option value="042">042</option>
+									<option value="043">043</option>
+									<option value="044">044</option>
+									<option value="051">051</option>
+									<option value="052">052</option>
+									<option value="053">053</option>
+									<option value="054">054</option>
+									<option value="055">055</option>
+									<option value="061">061</option>
+									<option value="062">062</option>
+									<option value="063">063</option>
+									<option value="064">064</option>
+
+								</select>
+								-
+								<input type="text" class="w09 mr5 ml5" name="tel2" maxlength="4">
+								-
+								<input type="text" class="w09 ml5" name="tel3" maxlength="4">
+							</p>
+						</li>
+						
+					</ul>
+				</div>
+
+			<!-- END Join Form -->
+
+		</div>
+		<!-- END Join -->
+	</div>
+	<div class="fz20 black02 mt35 mauto">
+		이용약관 동의* <span class="fz12 ml5">선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.</span>
+	</div>
+	<div class="board_box mt5 pb40">
+		<div class="pl40 mt2"><input type="checkbox" class="va0" id="sel00">
+				<label for="sel00" class="fz17 ml5 e_bold">전체 동의 </label> </div>
+			<div class="pl65 mt15">
+				<input type="checkbox" class="va0" id="sel01" name="agree" value="1">
+				<label for="sel01" class="fz15 ml5">이용약관 <span class="gray">(필수)</span></label> <a href="" class="fz12 navy ml15" data-toggle="modal" data-target="#myModal01">약관보기 ></a>
+				<br>
+				<input type="checkbox" class="va0" id="sel02" name="safe" value="1">
+				<label for="sel02" class="fz15 ml5">개인정보처리방침  <span class="gray">(필수)</span></label> <a href="" class="fz12 navy ml15"  data-toggle="modal" data-target="#myModal02">약관보기 ></a>
+				<br>
+				<input type="checkbox" class="va0" id="sel03" name="event">
+				<label for="sel03" class="fz15 ml5">이벤트 및 혜택 알림 수신 <span class="gray">(선택)</span></label> <!-- <a href="" class="fz12 navy ml15">약관보기 ></a> -->
+
+				<div class="mt3 mb7">
+					<input type="checkbox" class="va0 ml25" id="sel04" name="resms" value="1">
+					<label for="sel04" class="fz15 ml5">SMS</label>
+					<input type="checkbox" class="va0 ml45" id="sel05" name="mailing" value="1">
+					<label for="sel05" class="fz15 ml5">이메일</label>
+				</div>
+				</form>
+			</div>
+		</div>
+		<div class="ac mt50">
+			<button class="plain btn02 fz16 w225h55 " onclick="joinform_chk();">가입 하기</button>
+		</div>
+	</div>
+</div><!-- END Member Wrap -->
+<div class="modal" id="myModal01" role="dialog" style="display: none;">
+	<div class="modal-dialog" style="width: 752px;height: 500px;">
+
+		<!-- Modal content-->
+		<div class="modal-content" style="margin-top: 170px;">
+			<button type="button" class="close" data-dismiss="modal"><img src="/image/sub/close.jpg" alt=""></button>
+			<div class="navy e_bold fz17 pb17">이용약관</div>
+			<div class="ovy fz16 gray03 mt25" style="height: 320px; "><p>&nbsp;</p><p style="border: 0px; vertical-align: baseline; color: rgb(102, 102, 102); font-family: 'Noto Sans KR', sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);"><span style="margin: 0px; padding: 0px; border: 0px; vertical-align: baseline; font-size: 14px; letter-spacing: -0.25px;">· 수집 개인정보 항목 : 작성자 이름, 이메일, 연락처&nbsp;</span></p><p style="border: 0px; vertical-align: baseline; color: rgb(102, 102, 102); font-family: 'Noto Sans KR', sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);"><span style="margin: 0px; padding: 0px; border: 0px; vertical-align: baseline; font-size: 14px; letter-spacing: -0.25px;">· 개인정보의 수집 및 이용목적 : 원활한 의사소통 경로 확보</span></p><p style="border: 0px; vertical-align: baseline; color: rgb(102, 102, 102); font-family: 'Noto Sans KR', sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);"><span style="margin: 0px; padding: 0px; border: 0px; vertical-align: baseline; font-size: 14px; letter-spacing: -0.25px;">· 개인정보의 이용기간 : 접수 후 3개월 (단, 관계 법령에 따라 필요한 경우 해당 법률에서 정한 기간까지)</span></p><p style="border: 0px; vertical-align: baseline; color: rgb(102, 102, 102); font-family: 'Noto Sans KR', sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);"><span style="margin: 0px; padding: 0px; border: 0px; vertical-align: baseline; font-size: 14px; letter-spacing: -0.25px;">· 작성자는 아래 동의를 거부할 수 있고, 그 밖의 사항은 개인정보처리방침을 준수합니다.</span></p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p></div>
+
+		</div>
+	</div>
+</div>
+
+<div class="modal" id="myModal02" role="dialog" style="display: none;">
+	<div class="modal-dialog" style="width: 752px;height: 500px;">
+
+		<!-- Modal content-->
+		<div class="modal-content" style="margin-top: 170px;">
+			<button type="button" class="close" data-dismiss="modal"><img src="/image/sub/close.jpg" alt=""></button>
+			<div class="navy e_bold fz17 pb17">개인정보처리방침</div>
+			<div class="ovy fz16 gray03 mt25" style="height: 320px; "><p><span style="background-color: rgb(255, 255, 255); color: rgb(102, 102, 102); font-family: &quot;Noto Sans KR&quot;, sans-serif; font-size: 14px; letter-spacing: -0.25px;">· 수집 개인정보 항목 : 작성자 이름, 이메일, 연락처&nbsp;</span></p><p><span style="background-color: rgb(255, 255, 255); color: rgb(102, 102, 102); font-family: &quot;Noto Sans KR&quot;, sans-serif; font-size: 14px; letter-spacing: -0.25px;">· 개인정보의 수집 및 이용목적 : 원활한 의사소통 경로 확보</span></p><p><span style="background-color: rgb(255, 255, 255); color: rgb(102, 102, 102); font-family: &quot;Noto Sans KR&quot;, sans-serif; font-size: 14px; letter-spacing: -0.25px;">· 개인정보의 이용기간 : 접수 후 3개월 (단, 관계 법령에 따라 필요한 경우 해당 법률에서 정한 기간까지)</span></p><p><span style="background-color: rgb(255, 255, 255); color: rgb(102, 102, 102); font-family: &quot;Noto Sans KR&quot;, sans-serif; font-size: 14px; letter-spacing: -0.25px;">· 작성자는 아래 동의를 거부할 수 있고, 그 밖의 사항은 개인정보처리방침을 준수합니다.</span></p></div>
+
+		</div>
+	</div>
+</div>
+
+<script>
+
+function text_chkpw(){
+	var form = document.join_form;
+
+	if(form.passwd.value.length < 6 || rtn_engnum_mix_chk(form.passwd.value) == false){
+		$('#no_pw').show();
+		$('#ok_pw').hide();
+	}else{
+		$('#no_pw').hide();
+		$('#ok_pw').show();
+	}
+	form.passwd_check.value = "";
+	$('#no_multipw').hide();
+	$('#ok_multipw').hide();
+}
+
+function multi_chkpw(){
+	var form = document.join_form;
+	if(form.passwd.value != form.passwd_check.value) {
+		$('#no_multipw').show();
+		$('#ok_multipw').hide();
+	}else{
+		$('#no_multipw').hide();
+		$('#ok_multipw').show();
+	}
+}
+function joinform_chk()
+{
+	var form = document.join_form;
+	var agree = $("input[name='agree']:checkbox:checked").val();
+	var safe = $("input[name='safe']:checkbox:checked").val();
+
+				if(form.userid.value==""){
+				alert('아이디를 입력해주세요.');
+				form.userid.focus();
+				return;
+			}
+			else if(form.userid.value.length < 3 || form.userid.value.length > 16) {
+				alert("아이디는 3~15자로 입력 주세요.");
+				form.userid.focus();
+				return;
+			}
+			else if(form.userid_chk.value==''){
+				alert("아이디 중복체크하여 주세요.");
+				return;
+			}
+			else if(form.passwd.value=="") {
+				alert("비밀번호를 입력해 주세요.");
+				form.passwd.focus();
+				return;
+			}
+			else if(form.passwd.value.length < 6 || rtn_engnum_mix_chk(form.passwd.value) == false){
+
+				alert("비밀번호는 영문+숫자 조합 6자리 이상으로 입력해 주세요.");
+				form.passwd.focus();
+				return;
+
+			}else if(form.passwd_check.value=="") {
+				alert("비밀번호확인를 입력해 주세요.");
+				form.passwd_check.focus();
+				return;
+			}
+			else if(form.passwd.value != form.passwd_check.value) {
+				alert("비밀번호가 정확하지 않습니다. 정확히 입력해 주세요.");
+				form.passwd_check.focus();
+				return;
+			}
+			else if(form.name.value=="") {
+				alert("이름을 입력해 주세요.");
+				form.name.focus();
+				return;
+			}
+			else if(form.birth.value=="") {
+				alert("생년월일을 입력해 주세요.");
+				form.birth.focus();
+				return;
+			}
+
+
+			else if(form.zip1.value=="") {
+				alert("우편번호를 입력해 주세요.");
+				form.zip1.focus();
+				return;
+			}
+			/*else if(form.zip1.value.length != 3) {
+				alert("우편번호 앞 3자리를 입력해 주세요.");
+				form.zip1.focus();
+				return;
+			}
+			else if(form.zip2.value=="") {
+				alert("우편번호를 입력해 주세요.");
+				form.zip2.focus();
+				return;
+			}
+			else if(form.zip2.value.length != 3) {
+				alert("우편번호 뒤 3자리를 입력해 주세요.");
+				form.zip2.focus();
+				return;
+			} */
+			else if(form.add1.value=="") {
+				alert("주소를 입력해 주세요.");
+				form.add1.focus();
+				return;
+			}
+			else if(form.add2.value=="") {
+				alert("상세주소를 입력해 주세요.");
+				form.add2.focus();
+				return;
+			}
+			else if(form.email2.value=="") {
+				alert("이메일을 입력해 주세요.");
+				form.email2.focus();
+				return;
+			}
+			else if(form.phone1.value=="") {
+				alert("회원님의 휴대폰 번호를 입력해 주세요.");
+				form.phone1.focus();
+				return;
+			}
+			else if(form.phone2.value=="") {
+				alert("회원님의 휴대폰 번호를 입력해 주세요.");
+				form.phone2.focus();
+				return;
+			}
+			else if(form.phone3.value=="") {
+				alert("회원님의 휴대폰 번호를 입력해 주세요.");
+				form.phone3.focus();
+				return;
+			}else if(!agree){
+				alert("약관에 동의해 주세요.");
+				return;
+			}
+			else if(!safe){
+				alert("개인정보처리방침에 동의해 주세요.");
+				return;
+			}else{
+				form.submit();
+				form.writeBtn.disabled = true;
+			}
+	}
+
+function userChk()
+{
+
+	var form = document.join_form;
+	var pattern = /^(?=.*[a-zA-Z])(?=.*[0-9]).{3,16}$/;
+
+
+	if(form.userid.value==""){
+		alert('아이디를 입력해주세요.');
+		form.userid.focus();
+		return;
+	}else if(form.userid.value.length < 3 || form.userid.value.length > 16) {
+		alert("아이디는 3~15자의 영문과 숫자를 포함해 주세요.");
+		form.userid.focus();
+		return;
+	}else if(!pattern.test(form.userid.value)){
+    alert('아이디는 영문과 숫자를 포함해 주세요.');
+    return;
+   }else{
+		$.get("/html/dh_member/join/userChk/?userChkid="+form.userid.value,function(data){
+
+			if(data==0){
+				console.log(data);
+				alert("사용가능한 아이디 입니다.");
+				form.userid_chk.value=form.userid.value;
+				//form.passwd.focus();
+			}else{
+				console.log(data);
+				alert("현재 사용중인 아이디 입니다.");
+				form.userid_chk.value="";
+				form.userid.focus();
+			}
+		});
+	}
+
+	return;
+}
+
+</script>
+
+<script type="text/javascript">
+<!--
+
+ $(document).ready(function() {
+
+  //******************************************************************************
+  // 전체선택
+  //******************************************************************************
+    $("#sel00").click(function(){
+        //클릭되었으면
+        if($("#sel00").prop("checked")){
+            //input태그의 name이 chk인 태그들을 찾아서 checked옵션을 true로 정의
+            $("input[name=agree]").prop("checked",true);
+            $("input[name=safe]").prop("checked",true);
+            $("input[name=event]").prop("checked",true);
+            $("input[name=resms]").prop("checked",true);
+            $("input[name=mailing]").prop("checked",true);
+            //클릭이 안되있으면
+        }else{
+            //input태그의 name이 chk인 태그들을 찾아서 checked옵션을 false로 정의
+            $("input[name=agree]").prop("checked",false);
+            $("input[name=safe]").prop("checked",false);
+            $("input[name=event]").prop("checked",false);
+            $("input[name=resms]").prop("checked",false);
+            $("input[name=mailing]").prop("checked",false);
+        }
+    })
+
+  //******************************************************************************
+  // 상세검색 달력 스크립트
+  //******************************************************************************
+  var date_picker_option = {
+   monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+   dayNamesMin: ['일','월','화','수','목','금','토'],
+   weekHeader: 'Wk',
+   dateFormat: 'yy-mm-dd', //형식(20120303)
+   autoSize: false, //오토리사이즈(body등 상위태그의 설정에 따른다)
+   changeMonth: true, //월변경가능
+   changeYear: true, //년변경가능
+   showMonthAfterYear: true, //년 뒤에 월 표시
+   buttonImageOnly: true, //이미지표시
+   buttonText: '달력선택', //버튼 텍스트 표시
+  buttonImage: '/image/sub/pick.jpg', //이미지주소
+   showOn: "both", //엘리먼트와 이미지 동시 사용(both,button)
+   yearRange: '1920:2100' //1990년부터 2020년까지
+  };
+
+  $("#start_date").datepicker(date_picker_option);
+  $("#end_date").datepicker(date_picker_option);
+  $("#birth").datepicker(date_picker_option);
+
+ $("img.ui-datepicker-trigger").attr("style","  vertical-align:middle; cursor:pointer;"); //이미지버튼 style적용
+  $("#ui-datepicker-div").hide(); //자동으로 생성되는 div객체 숨김
+ });
+
+//-->
+</script><!--END Container-->
+
+<!-- 공통 적용 스크립트 , 모든 페이지에 노출되도록 설치. 단 전환페이지 설정값보다 항상 하단에 위치해야함 -->
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"> </script>
+<script type="text/javascript">
+if (!wcs_add) var wcs_add={};
+wcs_add["wa"] = "s_49cdfde53786";
+if (!_nasa) var _nasa={};
+if(window.wcs){
+wcs.inflow();
+wcs_do(_nasa);
+}
+</script>
+
+<!-- Mirae Script Ver 2.0 -->
+<script async="true" src="//log1.toup.net/mirae_log_chat_common.js?adkey=nmyce" charset="UTF-8"></script>
+<!-- Mirae Script END Ver 2.0 -->
+
+
+
+
+<script>
+	$(function(){
+		$(".quick .show").on("click",function(){
+			$(this).parent().toggleClass("open");
+		})
+	})
+</script>
+<!--Footer-->
+
+<!--END Wrap-->
+
+</body></html>
+
